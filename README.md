@@ -1,4 +1,4 @@
 # 42_Cursus
-Run
+Run\n
 ```git clone --recursive https://github.com/aaron-22766/42_Cursus.git```
-to import the repo including the submodules.
+\nto import the repo including the submodules.
