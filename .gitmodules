@@ -1,0 +1,9 @@
+[submodule "0.0_libft"]
+	path = 0.0_libft
+	url = https://github.com/aaron-22766/0.0_libft.git
+[submodule "1.0_get_next_line"]
+	path = 1.0_get_next_line
+	url = https://github.com/aaron-22766/1.0_get_next_line.git
+[submodule "1.1_ft_printf"]
+	path = 1.1_ft_printf
+	url = https://github.com/aaron-22766/1.1_ft_printf
