@@ -7,3 +7,6 @@
 [submodule "1.1_ft_printf"]
 	path = 1.1_ft_printf
 	url = https://github.com/aaron-22766/1.1_ft_printf
+[submodule "1.2_born2beroot"]
+	path = 1.2_born2beroot
+	url = https://github.com/aaron-22766/1.2_born2beroot.git
