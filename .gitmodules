@@ -16,3 +16,6 @@
 [submodule "2.1_minitalk"]
 	path = 2.1_minitalk
 	url = https://github.com/aaron-22766/2.1_minitalk.git
+[submodule "2.2_push_swap"]
+	path = 2.2_push_swap
+	url = https://github.com/aaron-22766/2.2_push_swap.git
