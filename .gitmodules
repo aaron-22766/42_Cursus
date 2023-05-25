@@ -22,3 +22,6 @@
 [submodule "3.0_philosophers"]
 	path = 3.0_philosophers
 	url = https://github.com/aaron-22766/3.0_philosophers.git
+[submodule "3.1_minishell"]
+	path = 3.1_minishell
+	url = https://github.com/aaron-22766/3.1_minishell.git
