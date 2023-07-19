@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:27:21 by arabenst          #+#    #+#             */
-/*   Updated: 2023/07/19 15:24:23 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/07/19 16:07:34 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ class PhoneBook {
 	void				searchPhoneBook(void) const;
 	void				printPhoneBook(void) const;
 
-	const std::string	pb_name;
-	Contact				contacts[MAX_CONTACTS];
-	int					contacts_count;
+	const std::string	_pb_name;
+	Contact				_contacts[MAX_CONTACTS];
+	int					_contacts_count;
 };
 
 /* ************************************************************************** */
