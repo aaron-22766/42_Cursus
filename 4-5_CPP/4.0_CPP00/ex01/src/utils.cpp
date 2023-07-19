@@ -6,11 +6,16 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 08:00:20 by arabenst          #+#    #+#             */
-/*   Updated: 2023/07/19 13:53:12 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/07/19 15:24:10 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/PhoneBook.hpp"
+
+void	trimWhitespace(std::string str) {
+	str.erase(0, str.find_first_not_of(" \n\t\b\f\r"));
+	str.erase(str.find_last_not_of(" \n\t\b\f\r") + 1);
+}
 
 std::string	promptForInput(std::string prompt) {
 	std::string	input;

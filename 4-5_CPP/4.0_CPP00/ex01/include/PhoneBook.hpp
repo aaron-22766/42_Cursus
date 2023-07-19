@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:27:21 by arabenst          #+#    #+#             */
-/*   Updated: 2023/07/19 13:45:30 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/07/19 15:24:23 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ class PhoneBook {
 /*                                 FUNCTIONS                                  */
 /* ************************************************************************** */
 
+void		trimWhitespace(std::string str);
 std::string	promptForInput(std::string prompt);
 bool		isValidInt(const std::string &str);
 void		printColumn(std::string content);

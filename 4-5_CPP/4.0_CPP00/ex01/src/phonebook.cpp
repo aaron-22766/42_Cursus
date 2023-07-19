@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 15:50:09 by arabenst          #+#    #+#             */
-/*   Updated: 2023/07/19 13:37:44 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/07/19 15:23:47 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,8 +81,7 @@ void	PhoneBook::runPhoneBook(void) {
 			}
 			error("Error while reading input!");
 		}
-		command.erase(0, command.find_first_not_of(" \n\t\b\f\r"));
-		command.erase(command.find_last_not_of(" \n\t\b\f\r") + 1);
+		trimWhitespace(command);
 		if (command == "ADD") {
 			this->addContact();
 		} else if (command == "SEARCH") {
@@ -90,11 +89,4 @@ void	PhoneBook::runPhoneBook(void) {
 		}
 	} while (command != "EXIT");
 	std::cout << "You left " << this->pb_name << std::endl;
-}
-
-int	main(void) {
-	PhoneBook	phonebook("My Awesome PhoneBook");
-
-	phonebook.runPhoneBook();
-	return (EXIT_SUCCESS);
 }
