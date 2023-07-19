@@ -2,3 +2,5 @@
 !*/Makefile
 !*/src
 !*/src/*.cpp
+!*/include
+!*/include/*.hpp
