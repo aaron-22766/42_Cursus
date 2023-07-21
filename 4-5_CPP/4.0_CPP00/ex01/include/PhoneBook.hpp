@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:27:21 by arabenst          #+#    #+#             */
-/*   Updated: 2023/07/19 16:07:34 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/07/21 14:25:39 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,30 +36,23 @@ class PhoneBook {
 
 	public:
 
-	PhoneBook(const std::string name);
-	~PhoneBook(void);
-	
-	void				runPhoneBook(void);
+		PhoneBook(void);
+		~PhoneBook(void);
+
+		Contact	getContact(int index) const;
+		int		getContactsCount(void) const;
+
+		void	addContact(void);
+		void	searchPhoneBook(void) const;
+
+		static std::string	promptForInput(std::string prompt);
 
 	private:
-	
-	void				addContact(void);
-	void				searchPhoneBook(void) const;
-	void				printPhoneBook(void) const;
 
-	const std::string	_pb_name;
-	Contact				_contacts[MAX_CONTACTS];
-	int					_contacts_count;
+		Contact	_contacts[MAX_CONTACTS];
+		int		_contacts_count;
 };
 
-/* ************************************************************************** */
-/*                                 FUNCTIONS                                  */
-/* ************************************************************************** */
-
-void		trimWhitespace(std::string str);
-std::string	promptForInput(std::string prompt);
-bool		isValidInt(const std::string &str);
-void		printColumn(std::string content);
-void		error(std::string err);
+std::ostream	&operator<<(std::ostream &os, const PhoneBook &phonebook);
 
 #endif

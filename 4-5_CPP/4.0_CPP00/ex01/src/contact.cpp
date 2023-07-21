@@ -1,81 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.cpp                                        :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 08:35:22 by arabenst          #+#    #+#             */
-/*   Updated: 2023/07/19 11:52:29 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/07/21 14:24:29 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/PhoneBook.hpp"
 
-int	Contact::_nbContacts = 0;
+Contact::Contact(void) {}
 
-Contact::Contact(void) {
-	this->_index = Contact::_nbContacts++;
+Contact::~Contact(void) {}
+
+std::string	Contact::getFirstName(void) const {
+	return (this->_first_name);
 }
 
-Contact::~Contact(void) {
-	Contact::_nbContacts--;
+std::string	Contact::getLastName(void) const {
+	return (this->_last_name);
 }
 
-void	Contact::askForField(std::string field) {
-	if (field == "first name") {
-		this->_first_name = promptForInput(field);
-	} else if (field == "last name") {
-		this->_last_name = promptForInput(field);
-	} else if (field == "nickname") {
-		this->_nickname = promptForInput(field);
-	} else if (field == "phone number") {
-		this->_phone_number = promptForInput(field);
-	} else if (field == "darkest secret") {
-		this->_darkest_secret = promptForInput(field);
-	}
+std::string	Contact::getNickname(void) const {
+	return (this->_nickname);
+}
+
+std::string	Contact::getPhoneNumber(void) const {
+	return (this->_phone_number);
+}
+
+std::string	Contact::getDarkestSecret(void) const {
+	return (this->_darkest_secret);
 }
 
 void	Contact::newContact(void) {
-	this->askForField("first name");
-	this->askForField("last name");
-	this->askForField("nickname");
-	this->askForField("phone number");
-	this->askForField("darkest secret");
+	this->_first_name = PhoneBook::promptForInput("first name");
+	this->_last_name = PhoneBook::promptForInput("last name");
+	this->_nickname = PhoneBook::promptForInput("nickname");
+	this->_phone_number = PhoneBook::promptForInput("phone number");
+	this->_darkest_secret = PhoneBook::promptForInput("darkest secret");
 }
 
-void	Contact::printField(std::string field) const {
-	std::cout << "\t" << field << ":\t";
-	if (field == "First Name") {
-		std::cout << this->_first_name;
-	} else if (field == "Last Name") {
-		std::cout << this->_last_name;
-	} else if (field == "Nickname") {
-		std::cout << this->_nickname;
-	} else if (field == "Phone Number") {
-		std::cout << this->_phone_number;
-	} else if (field == "Darkest Secret") {
-		std::cout << this->_darkest_secret;
-	}
-	std::cout << std::endl;
-}
-
-void	Contact::printContact(void) const {
-	
-	std::cout << std::endl << "Contact:" << std::endl;
-	printField("First Name");
-	printField("Last Name");
-	printField("Nickname");
-	printField("Phone Number");
-	printField("Darkest Secret");
-	std::cout << std::endl;
-}
-
-void	Contact::printTableLine(void) const {
-	std::cout << '|';
-	printColumn(std::to_string(this->_index));
-	printColumn(this->_first_name);
-	printColumn(this->_last_name);
-	printColumn(this->_nickname);
-	std::cout << std::endl;
+std::ostream	&operator<<(std::ostream &os, const Contact &contact) {
+	os << "Contact:" << std::endl;
+	os << "\tFirst Name:\t" << contact.getFirstName() << std::endl;
+	os << "\tLast Name:\t" << contact.getLastName() << std::endl;
+	os << "\tNickname:\t" << contact.getNickname() << std::endl;
+	os << "\tPhone Number:\t" << contact.getPhoneNumber() << std::endl;
+	os << "\tDarkest Secret:\t" << contact.getDarkestSecret() << std::endl;
+	return (os);
 }
