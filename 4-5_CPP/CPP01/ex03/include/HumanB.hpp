@@ -1,50 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/21 18:29:47 by arabenst          #+#    #+#             */
-/*   Updated: 2023/07/21 20:38:36 by arabenst         ###   ########.fr       */
+/*   Created: 2023/07/22 10:51:29 by arabenst          #+#    #+#             */
+/*   Updated: 2023/07/22 13:42:51 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
 /* ************************************************************************** */
-/*                                  INCLUDES                                  */
+/*                                  INCLUDE                                   */
 /* ************************************************************************** */
 
-# include <iostream>
-# include <string>
-# include <cstdlib>
+# include "Weapon.hpp"
 
 /* ************************************************************************** */
 /*                                   CLASS                                    */
 /* ************************************************************************** */
 
-class Zombie {
+class HumanB {
 
 	public:
 
-		Zombie(std::string name);
-		~Zombie(void);
+		HumanB(std::string name);
+		~HumanB(void);
 
-		void	announce(void);
+		void	attack(void) const;
+		void	setWeapon(Weapon &weapon);
 
 	private:
 
 		std::string	name;
+		Weapon		*weapon;
 
 };
-
-/* ************************************************************************** */
-/*                                 FUNCTIONS                                  */
-/* ************************************************************************** */
-
-Zombie	*newZombie(std::string name);
-void	randomChump(std::string name);
 
 #endif

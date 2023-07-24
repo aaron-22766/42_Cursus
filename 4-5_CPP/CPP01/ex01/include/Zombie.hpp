@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 18:29:47 by arabenst          #+#    #+#             */
-/*   Updated: 2023/07/21 20:38:36 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/07/22 09:53:48 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,11 @@ class Zombie {
 
 	public:
 
-		Zombie(std::string name);
+		Zombie(void);
 		~Zombie(void);
 
 		void	announce(void);
+		void	setName(std::string name);
 
 	private:
 
@@ -44,7 +45,6 @@ class Zombie {
 /*                                 FUNCTIONS                                  */
 /* ************************************************************************** */
 
-Zombie	*newZombie(std::string name);
-void	randomChump(std::string name);
+Zombie	*zombieHorde(int N, std::string name);
 
 #endif

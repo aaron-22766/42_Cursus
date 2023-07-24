@@ -1,50 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/21 18:29:47 by arabenst          #+#    #+#             */
-/*   Updated: 2023/07/21 20:38:36 by arabenst         ###   ########.fr       */
+/*   Created: 2023/07/22 10:51:29 by arabenst          #+#    #+#             */
+/*   Updated: 2023/07/24 11:12:00 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef HARL_HPP
+# define HARL_HPP
 
 /* ************************************************************************** */
-/*                                  INCLUDES                                  */
+/*                                  INCLUDE                                   */
 /* ************************************************************************** */
 
 # include <iostream>
 # include <string>
-# include <cstdlib>
+
+/* ************************************************************************** */
+/*                                  DEFINES                                   */
+/* ************************************************************************** */
+
+# define NB_LEVELS 4
 
 /* ************************************************************************** */
 /*                                   CLASS                                    */
 /* ************************************************************************** */
 
-class Zombie {
+class Harl {
 
 	public:
 
-		Zombie(std::string name);
-		~Zombie(void);
+		Harl(void);
+		~Harl(void);
 
-		void	announce(void);
+		static int	getLevelIndex(std::string level);
+		void		complain(std::string level);
+		void		complainFiltered(std::string filter);
 
 	private:
 
-		std::string	name;
+		void		debug(void);
+		void		info(void);
+		void		warning(void);
+		void		error(void);
 
+		void		(Harl::*_levels[NB_LEVELS])(void);
 };
-
-/* ************************************************************************** */
-/*                                 FUNCTIONS                                  */
-/* ************************************************************************** */
-
-Zombie	*newZombie(std::string name);
-void	randomChump(std::string name);
 
 #endif

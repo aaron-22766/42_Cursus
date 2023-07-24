@@ -1,50 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/21 18:29:47 by arabenst          #+#    #+#             */
-/*   Updated: 2023/07/21 20:38:36 by arabenst         ###   ########.fr       */
+/*   Created: 2023/07/22 10:51:29 by arabenst          #+#    #+#             */
+/*   Updated: 2023/07/22 13:42:57 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
 /* ************************************************************************** */
-/*                                  INCLUDES                                  */
+/*                                  INCLUDE                                   */
 /* ************************************************************************** */
 
 # include <iostream>
 # include <string>
-# include <cstdlib>
 
 /* ************************************************************************** */
 /*                                   CLASS                                    */
 /* ************************************************************************** */
 
-class Zombie {
+class Weapon {
 
 	public:
 
-		Zombie(std::string name);
-		~Zombie(void);
+		Weapon(std::string type);
+		~Weapon(void);
 
-		void	announce(void);
+		std::string getType(void) const;
+		void		setType(std::string type);
 
 	private:
 
-		std::string	name;
+		std::string	type;
 
 };
-
-/* ************************************************************************** */
-/*                                 FUNCTIONS                                  */
-/* ************************************************************************** */
-
-Zombie	*newZombie(std::string name);
-void	randomChump(std::string name);
 
 #endif
