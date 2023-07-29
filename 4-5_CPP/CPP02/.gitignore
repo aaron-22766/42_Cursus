@@ -1,7 +1,0 @@
-/*/*
-!*/Makefile
-!*/*.txt
-!*/src
-!*/src/*.cpp
-!*/include
-!*/include/*.hpp
