@@ -6,7 +6,7 @@
 #    By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/14 11:21:33 by arabenst          #+#    #+#              #
-#    Updated: 2023/07/24 10:30:10 by arabenst         ###   ########.fr        #
+#    Updated: 2023/07/29 15:57:40 by arabenst         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,16 +22,17 @@ OBJS		:=	$(addprefix $(OBJDIR)/, $(notdir $(SRCS:.cpp=.o)))
 
 CC			:=	c++
 CPPFLAGS	:=	-Wall -Werror -Wextra -std=c++98
+INCFLAGS	:=	-I $(INCDIR)
 
 RM			:=	rm
 RMFLAGS		:=	-rf
 
-$(NAME): $(OBJS) | $(INCS)
+$(NAME): $(OBJS)
 	$(CC) -o $@ $^
 
-$(OBJDIR)/%.o: $(SRCDIR)/%.cpp
+$(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(INCDIR)/%.hpp
 	mkdir -p $(@D)
-	$(CC) -c -o $@ $< $(CPPFLAGS)
+	$(CC) -c -o $@ $< $(CPPFLAGS) $(INCFLAGS)
 
 all: $(NAME)
 
