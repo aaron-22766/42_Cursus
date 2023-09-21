@@ -28,3 +28,6 @@
 [submodule "4-5_CPP"]
 	path = 4-5_CPP
 	url = https://github.com/aaron-22766/42_CPP.git
+[submodule "4.1_netpractice"]
+	path = 4.1_netpractice
+	url = https://github.com/aaron-22766/42_netpractice.git
