@@ -34,3 +34,6 @@
 [submodule "4.2_cub3D"]
 	path = 4.2_cub3D
 	url = https://github.com/aaron-22766/42_cub3D.git
+[submodule "5.1_inception"]
+	path = 5.1_inception
+	url = https://github.com/aaron-22766/42_inception.git
