@@ -2,7 +2,7 @@
 
 | Circle | Project | Language | Grade | Description |
 |--------|---------|----------|-------|-------------|
-| 0.0 | [libft](https://github.com/aaron-22766/42_42_libft) | [top language](https://img.shields.io/github/languages/top/aaron-22766/42_libft) | ![grade](https://img.shields.io/badge/:-125%25-success?style?style&logo=42) | Create a library of basic C functions. |
+| 0.0 | [libft](https://github.com/aaron-22766/42_libft) | [top language](https://img.shields.io/github/languages/top/aaron-22766/42_libft) | ![grade](https://img.shields.io/badge/:-125%25-success?style&logo=42) | Create a library of basic C functions. |
 | 1.0 | [get_next_line](https://github.com/aaron-22766/42_get_next_line) | ![top language](https://img.shields.io/github/languages/top/aaron-22766/42_get_next_line) | ![grade](https://img.shields.io/badge/:-125%25-success?style&logo=42) | Read a single line from a file descriptor, can be used in a loop. |
 | 1.1 | [ft_printf](https://github.com/aaron-22766/42_ft_printf) | ![top language](https://img.shields.io/github/languages/top/aaron-22766/42_ft_printf) | ![grade](https://img.shields.io/badge/:-125%25-success?style&logo=42) | Recode the standard C library function, printf. |
 | 1.2 | [born2beroot](https://github.com/aaron-22766/42_born2beroot) | ![top language](https://img.shields.io/github/languages/top/aaron-22766/42_born2beroot) | ![grade](https://img.shields.io/badge/:-125%25-success?style&logo=42) | Create a virtual machine to host a Debian server. |
