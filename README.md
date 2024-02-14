@@ -22,6 +22,10 @@
 | 6.0 | [![ft_transcendance](https://github.com/ayogun/42-project-badges/blob/main/badges/ft_transcendencee.png)](https://github.com/aaron-22766/42_webserv) | ![top language](https://img.shields.io/github/languages/top/aaron-22766/42_webserv) | ![grade](https://img.shields.io/badge/:-100%25-success?style&logo=42) | Create a website where users can chat and play pong (team project) |
 -->
 
+## The Holy Graph (Common Core) - as of Feb 2024
+
+![Holy Graph](https://github.com/aaron-22766/aaron-22766/blob/main/bin/images/Holy%20Graph.png)
+
 ## Import
 
 To clone this repository including the submodules:
