@@ -37,3 +37,6 @@
 [submodule "5.1_inception"]
 	path = 5.1_inception
 	url = https://github.com/aaron-22766/42_inception.git
+[submodule "5.2_webserv"]
+	path = 5.2_webserv
+	url = https://github.com/aaron-22766/42_webserv.git
