@@ -40,6 +40,6 @@
 [submodule "5.2_webserv"]
 	path = 5.2_webserv
 	url = https://github.com/aaron-22766/42_webserv.git
-[submodule "42_exams"]
-	path = 42_exams
-	url = https://github.com/aaron-22766/42-Exams.git
+[submodule "4-6_Exams"]
+	path = 4-6_Exams
+	url = https://github.com/aaron-22766/42_Exams.git
