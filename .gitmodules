@@ -43,6 +43,6 @@
 [submodule "4-6_Exams"]
 	path = 4-6_Exams
 	url = https://github.com/aaron-22766/42_Exams.git
-[submodule "6.0_transcendence"]
-	path = 6.0_transcendence
-	url = https://github.com/aaron-22766/42_transcendence
+[submodule "6.0_ft_transcendence"]
+	path = 6.0_ft_transcendence
+	url = https://github.com/aaron-22766/42_ft_transcendence
